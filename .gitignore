@@ -1,0 +1,16 @@
+node_modules/
+.pnpm-store/
+work/
+outputs/
+.next/
+out/
+.sites-runtime/
+test-results/
+*.tsbuildinfo
+.vercel/
+.env*
+!.env.example
+.dev.vars
+.dev.vars.*
+.wrangler/
+.openai/

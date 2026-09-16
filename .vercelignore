@@ -1,0 +1,11 @@
+node_modules
+.pnpm-store
+.next
+out
+work
+outputs
+.sites-runtime
+.openai
+.git
+test-results
+*.tsbuildinfo
