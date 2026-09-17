@@ -14,3 +14,92 @@
 .action-note p,.ai-summary p,.readiness>p,.score-note,.context-note p,.context-note>span:last-child,.source-label,.source-label>span,.gap-stage,.career-fit-label,.asset-file small,.demo-notice,.project-card-info p,.project-card-footer,.new-project-card p,.continue-footer>span,.next-move-content p,.portfolio-title>p,.portfolio-source,.image-caption,.copilot-disclaimer,.chat-form>div>span{color:var(--muted)}
 .action-note strong,.context-note .mini-label,.editor-toolbar>span,.outline-title,.story-editor>label,.linked-material>.mini-label{color:#776388}
 .chat-form textarea{font-size:14px}.suggested-prompts button{font-size:13px;color:#6d5a80}.action-note p{font-size:13px}.reason-row h4,.gap-details h4{font-size:13px}.portfolio-sections p{font-size:16px}.copilot-body{scrollbar-width:thin}
+/* Compact desktop workspace keeps decisions and primary actions in the first viewport. */
+@media (min-width:1200px) and (max-height:960px) {
+  .main-content,.main-content.with-copilot{padding:16px 28px}
+  .section-heading{margin-bottom:18px;gap:16px}
+  .section-heading .eyebrow{margin-bottom:4px}
+  .section-heading p{margin-top:4px;line-height:1.5}
+  .section-line{margin:18px 0 12px}
+  .view-footer{margin-top:16px;padding-top:12px}
+  .workspace-body{min-height:calc(100vh - 68px)}
+  .main-shell:has(.project-toolbar) .workspace-body{min-height:calc(100vh - 135px)}
+  .ai-summary{padding:12px 14px}
+  .career-workspace>.main-content{padding-top:12px}
+  .main-content:has(.career-grid)>div,.career-grid>*,.career-detail,.ai-summary>div,.reason-row>div{min-width:0}
+  .main-content:has(.career-grid) .section-heading{margin-bottom:8px}
+  .ai-summary+.section-line{margin:10px 0 8px}
+  .career-grid{gap:10px}
+  .career-card{padding:12px;min-width:0}
+  .career-card:first-child{grid-column:1/-1;padding:16px;min-height:168px}
+  .career-card h3{margin:7px 0;overflow-wrap:anywhere}
+  .career-card .thin-progress{margin-top:10px}
+  .career-detail{margin-top:16px}
+  .career-detail .section-line{margin:0 0 13px}
+  .reason-row{margin-bottom:10px;gap:10px}
+  .reason-row p{line-height:1.5}
+  .skill-tags{margin:12px 0 8px}
+  .diagnosis-overview{margin-bottom:8px}
+  .readiness{padding:10px 18px}
+  .readiness-number{font-size:36px;margin:3px 0}
+  .readiness>p{margin-top:5px;line-height:1.5;max-width:none}
+  .readiness>.text-link{margin-top:6px}
+  .radar-wrap .recharts-responsive-container{height:166px!important}
+  .gap-list{margin-top:8px;gap:6px}
+  .gap-summary{padding:5px 14px;gap:10px}
+  .gap-summary>div{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .gap-summary>div>div{margin-bottom:0}
+  .gap-summary .gap-icon{width:28px;height:28px}
+  .gap-details{display:grid;grid-template-columns:1fr 1fr;column-gap:20px;padding:0 14px 10px 52px}
+  .source-label{grid-column:1/-1;padding-bottom:4px;margin-bottom:4px}
+  .gap-details>h4{margin:0;grid-row:2}
+  .gap-details>h4:nth-of-type(2){grid-column:2}
+  .gap-details>p{grid-row:3;font-size:13px;line-height:1.45;margin-top:3px}
+  .gap-details>p:nth-of-type(2){grid-column:2}
+  .action-note{grid-column:1/-1;margin-top:6px;padding:7px 9px}
+  .action-note strong{display:inline}
+  .action-note p{display:inline;line-height:1.5;margin:0 0 0 7px}
+  .gap-actions{grid-column:1/-1;margin-top:6px}
+  .main-content:has(.diagnosis-overview) .section-heading{margin-bottom:12px}
+  .main-content:has(.diagnosis-overview) .view-footer{margin-top:10px;padding-top:10px}
+  .builder-notice{padding:9px 12px;margin-bottom:12px}
+  .builder{min-height:0}
+  .outline{padding:12px 8px}
+  .outline-title{padding-bottom:10px}
+  .outline-item>button{padding:9px 5px}
+  .story-editor{padding:16px}
+  .editor-toolbar{padding-bottom:10px;margin-bottom:12px}
+  .story-title-input{margin:6px 0 14px}
+  .story-body-input{min-height:142px;height:142px;line-height:1.65}
+  .linked-material{padding-top:10px}
+  .linked-material button{margin-top:7px}
+  .editor-actions{margin-top:12px;flex-wrap:wrap}
+  .evidence-warning{padding:9px;margin-top:10px}
+  .continue-project{min-height:230px}
+  .continue-copy{padding:22px}
+  .continue-copy .eyebrow{margin-bottom:12px}
+  .continue-footer{margin-top:20px}
+  .cover-photo{min-height:230px}
+  .project-card-image{height:110px}
+  .project-card-info{padding:12px 16px}
+  .new-project-card{min-height:220px}
+  .home-bottom{margin-top:16px}
+  .home-bottom .section-line{margin-top:14px}
+  .next-move-content{margin-top:12px}
+  .page-footnote{margin-top:12px}
+  .preview-controls{margin-bottom:16px}
+  .portfolio-title{padding:28px 40px}
+  .portfolio-facts{margin-top:22px}
+  .portfolio-cover{height:280px}
+}
+/* Desktop Career Match owns both columns, independent of height and animated content. */
+@media (min-width:951px) {
+  .career-workspace{display:grid;grid-template-columns:minmax(0,1fr);min-width:0}
+  .career-workspace.career-with-copilot{grid-template-columns:minmax(0,1fr) 320px}
+  .career-workspace>.main-content{grid-column:1;width:auto;min-width:0;max-width:none}
+  .career-workspace>.main-content>div{min-width:0;max-width:100%}
+  .career-workspace>.copilot{grid-column:2;grid-row:1;position:sticky;inset:0 auto auto;align-self:start;width:320px;min-width:0;max-width:320px}
+  .career-workspace .career-grid{width:auto;min-width:0;max-width:100%;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+  .career-workspace .career-card{min-width:0;max-width:100%}
+  .career-workspace .career-card:first-child{grid-column:1/-1}
+}
